@@ -25,6 +25,7 @@ SECRET_KEY = "django-insecure-flfy))j&@(!34q4r1-%oyjn92q51e=2mii*#wxn8i#0@mdcd1r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Allow all hosts
 ALLOWED_HOSTS = ["*"]
 
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "octofit_tracker_app",
     "corsheaders",
+    "octofit_tracker",
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,16 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Enable CORS
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+    "x-csrftoken",
+]

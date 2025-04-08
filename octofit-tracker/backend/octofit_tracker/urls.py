@@ -31,3 +31,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # Admin endpoint
     path('api/', include(router.urls)),  # API endpoint
 ]
+
+urlpatterns += router.urls
